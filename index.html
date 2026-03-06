@@ -3,18 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>From Touch to Action — ICRA 2026 Workshop</title>
-  <meta name="description" content="From Touch to Action: Enhancing Robot Manipulation policies through Tactile Perception. Full-day workshop at ICRA 2026, Vienna." />
+  <title>From Touch to Action — IROS 2026 Workshop</title>
+  <meta name="description" content="From Touch to Action: Enhancing Robot Manipulation policies through Tactile Perception. Half-day workshop at IROS 2026, Pittsburgh, PA." />
   <!-- Tailwind (CDN, no build needed) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Small quality-of-life tweaks */
     html {
-      font-size: 16px; /* default is 16px — increase globally */
+      font-size: 16px;
       scroll-behavior: smooth;
     }
     .chip { @apply inline-flex items-center rounded-full bg-neutral-700 px-3 py-1 text-xs text-neutral-200; }
-    .card { @apply rounded-3xl border border-neutral-700 p-6 bg-neutral-800/40; }
+    .card {
+      @apply rounded-3xl border border-neutral-700 p-6 bg-neutral-800/40;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgb(82 82 82);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    /* Schedule: accent left borders by event type */
+    #schedule .card:has(.text-fuchsia-300) { border-left: 3px solid rgb(216 180 254 / 0.7); }
+    #schedule .card:has(.text-amber-100)   { border-left: 3px solid rgb(251 191 36  / 0.7); }
+    /* Section heading gradient underline */
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 3px;
+      margin-top: 0.5rem;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, rgb(216 180 254), transparent);
+    }
+    /* Hero subtle dot grid */
+    .hero-grid {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    /* Speaker photo ring on hover */
+    #speakers img { transition: box-shadow 0.18s ease; }
+    #speakers .card:hover img {
+      box-shadow: 0 0 0 3px rgb(216 180 254 / 0.5), 0 0 24px rgb(216 180 254 / 0.2);
+    }
   </style>
 </head>
 <!-- <body class="min-h-screen bg-neutral-800 text-neutral-100"> -->
@@ -23,7 +53,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur bg-neutral-900/70 border-b border-neutral-700">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-bold text-3xl tracking-tight">From Touch to Action</a>
+      <a href="#home" class="font-bold text-3xl tracking-tight bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">From Touch to Action</a>
       <nav class="hidden md:flex gap-4 text-sm">
         <a href="#about" class="hover:text-white/90 text-neutral-300 text-base">About</a>
         <a href="#topics" class="hover:text-white/90 text-neutral-300 text-base">Topics</a>
@@ -43,17 +73,17 @@
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-fuchsia-600/20 via-transparent to-transparent pointer-events-none"></div>
+  <section id="home" class="relative overflow-hidden hero-grid">
+    <div class="absolute inset-0 bg-gradient-to-b from-fuchsia-600/25 via-transparent to-transparent pointer-events-none"></div>
     <div class="mx-auto max-w-7xl px-4 py-16 md:py-24">
       <div class="max-w-3xl">
-        <p class="text-sm uppercase tracking-widest text-fuchsia-300/80">ICRA 2026 Workshop • Full-day</p>
+        <span class="inline-flex items-center rounded-full border border-fuchsia-500/40 bg-fuchsia-500/10 px-4 py-1.5 text-xs uppercase tracking-widest text-fuchsia-300">IROS 2026 Workshop • Half-day</span>
         <h1 class="mt-3 text-3xl md:text-5xl font-extrabold leading-tight">
           From Touch to Action:
           <span class="block text-fuchsia-300/100">Enhancing Robot Manipulation Policies through Tactile Perception</span>
         </h1>
         <p class="mt-4 text-lg text-neutral-300">
-          Vienna, Austria • June 1–5, 2026 (exact day TBA). Hosted at the IEEE International Conference on Robotics and Automation (ICRA).
+          Pittsburgh, Pennsylvania, USA • September 27 – October 1, 2026 (exact day TBA). Hosted at the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026).
         </p>
         <!-- <div class="mt-6 flex flex-wrap gap-3">
           <span class="chip">Tactile Sensing</span>
@@ -63,8 +93,8 @@
           <span class="chip">Control</span>
         </div>tactile -->
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#submissions" class="rounded-xl px-5 py-3 bg-fuchsia-300 text-neutral-950 font-semibold hover:bg-fuchsia-200">Call for Submissions</a>
-          <a href="#schedule" class="rounded-xl px-5 py-3 bg-neutral-700 text-neutral-200 hover:bg-neutral-600">See Schedule</a>
+          <a href="#submissions" class="rounded-xl px-5 py-3 bg-fuchsia-300 text-neutral-950 font-semibold hover:bg-fuchsia-200 transition-colors duration-200">Call for Submissions</a>
+          <a href="#schedule" class="rounded-xl px-5 py-3 bg-neutral-700 text-neutral-200 hover:bg-neutral-600 transition-colors duration-200">See Schedule</a>
         </div>
       </div>
     </div>
@@ -74,7 +104,7 @@
   <section id="about" class="mx-auto max-w-7xl px-4 py-14 md:py-20">
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold">Why <span class="text-fuchsia-300">touch</span>, why <span class="text-fuchsia-300">now</span>?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold section-title">Why <span class="text-fuchsia-300">touch</span>, why <span class="text-fuchsia-300">now</span>?</h2>
         <p class="mt-4 text-neutral-300">
         While touch is fundamental for human perception, it remains underutilized in robotics compared to vision or audition. 
         This workshop takes a vertical view—from biological inspiration and sensor design to simulation, perception, 
@@ -91,15 +121,15 @@
         <dl class="grid grid-cols-2 gap-4 text-sm">
           <div>
             <dt class="text-neutral-400 text-lg">Event</dt>
-            <dd class="font-medium text-lg">Full-day workshop @ ICRA 2026</dd>
+            <dd class="font-medium text-lg">Half-day workshop @ IROS 2026</dd>
           </div>
           <div>
             <dt class="text-neutral-400 text-lg">Location</dt>
-            <dd class="font-medium text-lg">Vienna, Austria</dd>
+            <dd class="font-medium text-lg">Pittsburgh, PA, USA</dd>
           </div>
           <div>
             <dt class="text-neutral-400 text-lg">Dates</dt>
-            <dd class="font-medium text-lg">June 1–5, 2026 (TBA)</dd>
+            <dd class="font-medium text-lg">Sep 27 – Oct 1, 2026 (TBA)</dd>
           </div>
           <div>
             <dt class="text-neutral-400 text-lg">Submission Types</dt>
@@ -112,7 +142,7 @@
 
   <!-- Topics -->
   <section id="topics" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Workshop scope</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">Workshop scope</h2>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Bioinspiration</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-100">Functional principles of human and animal touch inspiring artificial tactile systems.</p></div>
       <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Transduction & Design</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-300">Exploring optical and magnetic sensing, design trade-offs, materials, morphology, and system integration.</p></div>
@@ -125,8 +155,8 @@
   <!-- Schedule (draft) -->
   <section id="schedule" class="mx-auto max-w-7xl px-4 py-14">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="text-2xl md:text-3xl font-bold">Tentative Schedule </h2>
-      <span class="text-sm text-neutral-400">All times local (Vienna, Austria) • Subject to change</span>
+      <h2 class="text-2xl md:text-3xl font-bold section-title">Tentative Schedule </h2>
+      <span class="text-sm text-neutral-400">All times local (Pittsburgh, USA) • Subject to change</span>
     </div>
     <ol class="mt-6 space-y-3">
       <!-- Workshop Opening -->
@@ -340,7 +370,7 @@
 
   <!-- Call for Submissions -->
   <section id="submissions" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Call for Submissions</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">Call for Submissions</h2>
     <div class="mt-6 grid md:grid-cols-3 gap-6">
       <div class="card">
         <h3 class="font-semibold">Short Papers (3–4 pages)</h3>
@@ -380,7 +410,7 @@
 
 <!-- Speakers (Flat list with photos) -->
 <section id="speakers" class="mx-auto max-w-7xl px-4 py-14">
-  <h2 class="text-2xl md:text-3xl font-bold">Invited Speakers</h2>
+  <h2 class="text-2xl md:text-3xl font-bold section-title">Invited Speakers</h2>
   <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- Example speaker card -->
@@ -446,7 +476,7 @@
 
   <!-- Organizers -->
   <section id="organizers" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Organizing Committee</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">Organizing Committee</h2>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="card"><h3 class="font-semibold">Lorenzo Natale</h3><p class="text-sm text-neutral-300">Senior Researcher • IIT</p><a href="mailto:lorenzo.natale@iit.it" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">lorenzo.natale@iit.it</a></div>
       <div class="card"><h3 class="font-semibold">Lorenzo Jamone</h3><p class="text-sm text-neutral-300">Associate Professor • UCL</p><a href="mailto:l.jamone@ucl.ac.uk" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">l.jamone@ucl.ac.uk</a></div>
@@ -461,7 +491,7 @@
   <!-- Industry & sponsors -->
   <section id="industry" class="mx-auto max-w-7xl px-4 py-14">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="text-2xl md:text-3xl font-bold">Industry & Sponsors</h2>
+      <h2 class="text-2xl md:text-3xl font-bold section-title">Industry & Sponsors</h2>
       <!-- <a href="#contact" class="text-sm text-fuchsia-300 hover:text-fuchsia-200">Become a sponsor →</a> -->
     </div>
     <div class="mt-6 space-y-8">
@@ -492,7 +522,7 @@
 
   <!-- FAQ -->
   <!-- <section id="faq" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">FAQ</h2>
     <div class="mt-6 space-y-4">
       <details class="card">
         <summary class="font-semibold cursor-pointer">What is the scope of the workshop?</summary>
@@ -512,7 +542,7 @@
   <!-- Contact -->
   <section id="contact" class="mx-auto max-w-7xl px-4 py-14">
     <div class="card">
-      <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+      <h2 class="text-2xl md:text-3xl font-bold section-title">Contact</h2>
       <p class="mt-2 text-neutral-300">Questions, sponsorship, or accessibility requests? Email the organizers at
         <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:icra.touch2action@gmail.com"> icra.touch2action@gmail.com</a>.
       </p>
@@ -521,7 +551,7 @@
         <a href="#submissions" class="rounded-xl px-4 py-2 bg-fuchsia-300 text-neutral-950 hover:bg-fuchsia-200 text-sm font-semibold">Submit your work</a>
       </div> -->
     </div>
-    <p class="mt-6 text-xs text-neutral-500">© ICRA 2026 Touch2Action Workshop Organizers. </p>
+    <p class="mt-6 text-xs text-neutral-500">© IROS 2026 Touch2Action Workshop Organizers. </p>
   </section>
 </body>
 </html>
