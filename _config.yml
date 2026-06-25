@@ -3,4 +3,4 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 gem "github-pages", group: :jekyll_plugins
 title: From Touch to Action: Enhancing Robot Manipulation Policies through Tactile Perception
-description: [Webpage for ICRA 2026 Workshop, From Touch to Action: Enhancing Robot Manipulation Policies through Tactile Perception]
+description: [Webpage for IROS 2026 Workshop, From Touch to Action: Enhancing Robot Manipulation Policies through Tactile Perception]
