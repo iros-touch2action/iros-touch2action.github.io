@@ -45,6 +45,22 @@
     #speakers .card:hover img {
       box-shadow: 0 0 0 3px rgb(216 180 254 / 0.5), 0 0 24px rgb(216 180 254 / 0.2);
     }
+    /* Workshop theme question callout */
+    .theme-question {
+      margin-top: 0.85rem;
+      padding: 0.75rem 0.9rem;
+      border-left: 2px solid rgb(216 180 254 / 0.75);
+      border-radius: 0.75rem;
+      background: rgb(217 70 239 / 0.08);
+    }
+    .theme-question-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgb(245 208 254);
+      font-weight: 700;
+    }
   </style>
 </head>
 <!-- <body class="min-h-screen bg-neutral-800 text-neutral-100"> -->
@@ -99,7 +115,7 @@
   <section id="about" class="mx-auto max-w-7xl px-4 py-14 md:py-20">
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold section-title">Why <span class="text-fuchsia-300">touch</span>, why <span class="text-fuchsia-300">now</span>?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold section-title"> <span class="text-fuchsia-300">About the Workshop</span> </h2>
         <p class="mt-4 text-neutral-300">
         Touch is fundamental to human interaction with the world, yet in robotics it remains far less developed and
         standardized than vision, proprioception, or language-based AI. This workshop brings together complementary
@@ -140,46 +156,52 @@
 
   <!-- Topics -->
   <section id="topics" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold section-title">Workshop Areas</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">Touch-to-Action Workshop Themes</h2>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">The Sense of Touch --- From Humans to Robots</h3>
-        <p class="mt-2 text-base text-neutral-300 text-fuchsia-100">
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">I. The Sense of Touch --- From Humans to Robots</h3>
+        <p class="mt-2 text-base text-neutral-300">
           Functional principles of human and animal touch inspiring artificial tactile systems.
         </p>
-        <p class="mt-2 text-base text-fuchsia-100">
-          How does biological touch work, and how does it inspire artificial tactile systems?
-        </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How does biological touch work, and how does it inspire artificial tactile systems?</p>
         </div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Development & Integration of Tactile Sensors</h3>
+        </div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">II. Development & Integration of Tactile Sensors</h3>
         <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
           Exploring optical and magnetic sensing, design trade-offs, materials, morphology, and system integration.</p>
 
-        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
-          How can we design and integrate tactile sensors for real-world robotic applications?
-          Which transduction method is most appropriate for a given application?
-        </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How can we design and integrate tactile sensors for real-world robotic applications?</p>
+          <p class="mt-1 text-base text-fuchsia-100">Which transduction method is most appropriate for a given application?</p>
+        </div>
       </div> 
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Simulation of Tactile Sensors</h3>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">III. Simulation of Tactile Sensors</h3>
         <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
           From high-fidelity FEM modeling to real-time simulators — bridging the sim-to-real gap in tactile sensing and control.</p>
-        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
-          How can we simulate tactile sensors and their interaction with the environment to enable sim-to-real transfer?
-          How can we achieve effective yet tactile simulations? What is missing?
-        </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How can we simulate tactile sensors and their interaction with the environment to enable sim-to-real transfer?</p>
+          <p class="mt-1 text-base text-fuchsia-100">How can we achieve effective yet tactile simulations? What is missing?</p>
+        </div>
       </div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Tactile Perception & Processing</h3>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">IV. Tactile Perception & Processing</h3>
         <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
           Learning from tactile data — domain adaptation, and multimodal fusion with vision and proprioception.</p>
-        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
-          How should tactile data be processed to extract meaningful information? 
-          How can we fuse tactile data with other modalities? </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How should tactile data be processed to extract meaningful information?</p>
+          <p class="mt-1 text-base text-fuchsia-100">How can we fuse tactile data with other modalities?</p>
         </div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Tactile Sensing in Robot Learning and Manipulation</h3>
+        </div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">V. Tactile Sensing in Robot Learning and Manipulation</h3>
         <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
           Enhancing multimodal control policies in imitation learning and reinforcement learning through tactile sensing.</p>
-        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
-          When is touch not just useful, but essential for learning and manipulation?
-        </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">When is touch not just useful, but essential for learning and manipulation?</p>
+        </div>
         </div>
     </div>
   </section>
@@ -335,23 +357,24 @@
         </p>
         <a href="#" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">Demo Guidelines →</a>
       </div>
-    </div>
 
     <!-- Mini-Reviews -->
       <div class="card">
         <h3 class="font-semibold">Mini-Reviews and Perspectives (1-2 pages)</h3>
         <p class="mt-2 text-sm text-neutral-300">
           Critical synthesis of a focused research topic amoung the workshop areas that summarizes recent advances, highlight open challenges, and point to emerging trends.
-          Authors of particularly promising mini-reviews may be invited to collaborate with the organizers on a perspective article building on the workshop themes.
+          Authors of promising mini-reviews may be invited to collaborate with the organizers on a perspective article building on the workshop themes.
         </p>
         <a href="https://openreview.net/group?id=IEEE.org/IROS/2026/Workshop/Touch2Action" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">OpenReview Submission →</a>
         
       </div>
+    </div>
 
     <!-- Mini-review guidelines -->
     <div class="mt-8 card">
       <!--guidelines for mini-reviews -->
-      <h4 class="text-xl font-semibold">Guidelines for Mini-Reviews and Perspectives</h4>
+      <h4 class="text-xl font-semibold">Touch-to-Action Perspective Initiative</h4>
+      <p class="mt-1 text-base text-fuchsia-200">Guidelines for Mini-Reviews and Perspectives</p>
 
       <!-- community-driven perspective -->
       <p class="mt-2 text-sm text-neutral-300">
