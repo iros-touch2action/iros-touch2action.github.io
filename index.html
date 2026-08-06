@@ -45,6 +45,22 @@
     #speakers .card:hover img {
       box-shadow: 0 0 0 3px rgb(216 180 254 / 0.5), 0 0 24px rgb(216 180 254 / 0.2);
     }
+    /* Workshop theme question callout */
+    .theme-question {
+      margin-top: 0.85rem;
+      padding: 0.75rem 0.9rem;
+      border-left: 2px solid rgb(216 180 254 / 0.75);
+      border-radius: 0.75rem;
+      background: rgb(217 70 239 / 0.08);
+    }
+    .theme-question-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgb(245 208 254);
+      font-weight: 700;
+    }
   </style>
 </head>
 <!-- <body class="min-h-screen bg-neutral-800 text-neutral-100"> -->
@@ -59,6 +75,7 @@
         <a href="#speakers" class="hover:text-white/90 text-neutral-300 text-base">Speakers</a>
         <a href="#schedule" class="hover:text-white/90 text-neutral-300 text-base">Schedule</a>
         <a href="#submissions" class="hover:text-white/90 text-neutral-300 text-base">CFP</a>
+        <a href="#perspective-initiative" class="hover:text-white/90 text-neutral-300 text-base">Initiative</a>
         <a href="#organizers" class="hover:text-white/90 text-neutral-300 text-base">Organizers</a>
       </nav>
       <div class="flex gap-2">
@@ -78,15 +95,9 @@
           <span class="block text-fuchsia-300/100">Enhancing Robot Manipulation through Tactile Perception</span>
         </h1>
         <p class="mt-4 text-lg text-neutral-300">
-          Pittsburgh, Pennsylvania, USA • October 1, 2026. Hosted at the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026).
+          Pittsburgh, Pennsylvania, USA • October 1, 2026 • IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026).
         </p>
-        <!-- <div class="mt-6 flex flex-wrap gap-3">
-          <span class="chip">Tactile Sensing</span>
-          <span class="chip">Manipulation</span>
-          <span class="chip">Simulation</span>
-          <span class="chip">Perception</span>
-          <span class="chip">Control</span>
-        </div>tactile -->
+       
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#submissions" class="rounded-xl px-5 py-3 bg-fuchsia-300 text-neutral-950 font-semibold hover:bg-fuchsia-200 transition-colors duration-200">Call for Submissions</a>
           <a href="#schedule" class="rounded-xl px-5 py-3 bg-neutral-700 text-neutral-200 hover:bg-neutral-600 transition-colors duration-200">See Schedule</a>
@@ -99,7 +110,7 @@
   <section id="about" class="mx-auto max-w-7xl px-4 py-14 md:py-20">
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold section-title">Why <span class="text-fuchsia-300">touch</span>, why <span class="text-fuchsia-300">now</span>?</h2>
+        <h2 class="text-2xl md:text-3xl font-bold section-title"> <span class="text-fuchsia-300">About the Workshop</span> </h2>
         <p class="mt-4 text-neutral-300">
         Touch is fundamental to human interaction with the world, yet in robotics it remains far less developed and
         standardized than vision, proprioception, or language-based AI. This workshop brings together complementary
@@ -110,8 +121,7 @@
         applications highlighted in manufacturing and healthcare.
         </p>
         <p class="mt-3 text-neutral-300">
-        The program features Keynote Talks, an Industry Session, a Panel Discussion, Lightning Talks, and Poster
-        Presentations, creating an interactive forum for the robotics and AI communities to exchange ideas and discuss
+        The program features <b>Keynote Talks</b>, an <b>Industry Session</b>, a <b>Panel Discussion</b>, <b>Lightning Talks</b>, and <b>Poster Presentations</b>, creating an interactive forum for the robotics and AI communities to exchange ideas and discuss
         future directions for tactile intelligence.
         </p>
       </div>
@@ -131,7 +141,7 @@
           </div>
           <div>
             <dt class="text-neutral-400 text-lg">Submission Types</dt>
-            <dd class="font-medium text-lg">Short papers/Mini-reviews/Demos</dd>
+            <dd class="font-medium text-lg">Short Papers • Live Demos • Reviews & Perspectives</dd>
           </div>
         </div>
       </div>
@@ -140,13 +150,53 @@
 
   <!-- Topics -->
   <section id="topics" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold section-title">Workshop scope</h2>
+    <h2 class="text-2xl md:text-3xl font-bold section-title">Touch-to-Action Workshop Themes</h2>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Bioinspiration</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-100">Functional principles of human and animal touch inspiring artificial tactile systems.</p></div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Transduction & Design</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-300">Exploring optical and magnetic sensing, design trade-offs, materials, morphology, and system integration.</p></div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Simulation</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-300">From high-fidelity FEM modeling to real-time simulators — bridging the sim-to-real gap in tactile sensing and control.</p></div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Perception & Touch Processing</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-300">Learning from tactile data — domain adaptation, and multimodal fusion with vision and proprioception.</p></div>
-      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">Control for Manipulation</h3><p class="mt-2 text-base text-neutral-300 text-fuchsia-300">Enhancing multimodal control policies in imitation learning and reinforcement learning through tactile sensing.</p></div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">I. The Sense of Touch --- From Humans to Robots</h3>
+        <p class="mt-2 text-base text-neutral-300">
+          Functional principles of human and animal touch inspiring artificial tactile systems.
+        </p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How does biological touch work, and how does it inspire artificial tactile systems?</p>
+        </div>
+        </div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">II. Development & Integration of Tactile Sensors</h3>
+        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
+          Exploring optical and magnetic sensing, design trade-offs, materials, morphology, and system integration.</p>
+
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How can we design and integrate tactile sensors for real-world robotic applications?</p>
+          <p class="mt-1 text-base text-fuchsia-100">Which transduction method is most appropriate for a given application?</p>
+        </div>
+      </div> 
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">III. Simulation of Tactile Sensors</h3>
+        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
+          From high-fidelity FEM modeling to real-time simulators — bridging the sim-to-real gap in tactile sensing and control.</p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How can we simulate tactile sensors and their interaction with the environment to enable sim-to-real transfer?</p>
+          <p class="mt-1 text-base text-fuchsia-100">How can we achieve effective yet tactile simulations? What is missing?</p>
+        </div>
+      </div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">IV. Tactile Perception & Processing</h3>
+        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
+          Learning from tactile data — domain adaptation, and multimodal fusion with vision and proprioception.</p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">How should tactile data be processed to extract meaningful information?</p>
+          <p class="mt-1 text-base text-fuchsia-100">How can we fuse tactile data with other modalities?</p>
+        </div>
+        </div>
+      <div class="card"><h3 class="font-semibold text-lg text-fuchsia-300">V. Tactile Sensing in Robot Learning and Manipulation</h3>
+        <p class="mt-2 text-base text-neutral-300 text-fuchsia-300">
+          Enhancing multimodal control policies in imitation learning and reinforcement learning through tactile sensing.</p>
+        <div class="theme-question">
+          <span class="theme-question-label">Key question</span>
+          <p class="mt-1 text-base text-fuchsia-100">When is touch not just useful, but essential for learning and manipulation?</p>
+        </div>
+        </div>
     </div>
   </section>
 
@@ -278,41 +328,74 @@
   </section>
 
   <!-- Call for Submissions -->
-  <section id="submissions" class="mx-auto max-w-7xl px-4 py-14">
+  <section id="submissions" class="mx-auto max-w-7xl px-4 py-14 scroll-mt-24">
     <h2 class="text-2xl md:text-3xl font-bold section-title">Call for Submissions</h2>
     <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <!-- Short Papers -->
       <div class="card">
-        <h3 class="font-semibold">Regular Short Papers (up to 4 pages, excl. references)</h3>
+        <h3 class="font-semibold">Regular Short Papers (1-4 pages)</h3>
         <p class="mt-2 text-sm text-neutral-300">
-          Original research across sensing, perception, simulation, learning, and control.
+          Original research across the workshop themes.
           Accepted papers will be selected for Lightning Talks or Poster presentations.
-          A <span class="text-neutral-100 font-medium">Best Paper Award</span>, supported by XELA Robotics, will be presented to an outstanding regular paper.
-          <!-- Physical demonstrations are also welcome. If any resources (e.g., space, equipment) are needed, please directly contact the organizers. -->
+          XELA Robotics will present a <span class="text-neutral-100 font-medium">Best Paper Award</span> to an outstanding regular paper.
         </p>
         <a href="https://openreview.net/group?id=IEEE.org/IROS/2026/Workshop/Touch2Action" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">OpenReview Submission →</a>
       </div>
-      <div class="card">
-        <h3 class="font-semibold">Mini-Reviews and Perspectives (up to 4 pages, excl. references)</h3>
-        <p class="mt-2 text-sm text-neutral-300">
-          Concise overviews of topics covered by the workshop that summarize recent advances, highlight open challenges, and point to emerging trends.
-          Authors of particularly promising mini-reviews may be invited to collaborate with the organizers on a review article building on the workshop themes.
-        </p>
-        <a href="https://openreview.net/group?id=IEEE.org/IROS/2026/Workshop/Touch2Action" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">OpenReview Submission →</a>
-      </div>
+      
+      <!-- Physical Demos -->
       <div class="card">
         <h3 class="font-semibold">Physical Demos</h3>
         <p class="mt-2 text-sm text-neutral-300">
-          Live or video demonstrations of tactile sensors, hands, and manipulation systems. Space and power are limited; details TBA.
+          Showcase your tactile sensors, hands, or manipulation systems in live or video demonstrations. Please inform us so we can accommodate your setup and provide any necessary resources (e.g., space, equipment).
         </p>
-        <a href="#" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">Demo Guidelines →</a>
+        <!-- <a href="#" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">Demo Guidelines →</a> -->
+      </div>
+
+    <!-- Mini-Reviews -->
+      <div class="card">
+        <h3 class="font-semibold">Mini-Reviews and Perspectives (1-2 pages)</h3>
+        <p class="mt-2 text-sm text-neutral-300">
+          Critical synthesis of a focused research topic amoung the workshop areas that summarizes recent advances, highlight open challenges, and point to emerging trends.
+          Authors of promising mini-reviews may be invited to collaborate with the organizers on the <span class="text-fuchsia-300 font-medium">Touch-to-Action Perspective Initiative</span>.
+        </p>
+        <a href="https://openreview.net/group?id=IEEE.org/IROS/2026/Workshop/Touch2Action" class="mt-3 inline-block text-sm font-semibold text-fuchsia-300 hover:text-fuchsia-200">OpenReview Submission →</a>
+        
       </div>
     </div>
+
+    <!-- Mini-review guidelines -->
+    <div id="perspective-initiative" class="mt-8 card scroll-mt-24">
+      <!--guidelines for mini-reviews -->
+      <h4 class="text-xl font-semibold">Touch-to-Action Perspective Initiative</h4>
+
+      <!-- community-driven perspective -->
+      <p class="mt-2 text-sm text-neutral-300">
+        Selected submissions will serve as the foundation for a community-driven Perspective article on the role of tactile sensing for robot manipulation, coordinated by the workshop organizers after IROS 2026. 
+        Participation in the collaborative article is voluntary. 
+        Authors of selected submissions will be invited to contribute to the joint manuscript, which will synthesize complementary viewpoints into a coherent perspective on the future of tactile sensing for robotic manipulation. 
+        The final perspective will be submitted to an IEEE journal.
+      </p>
+
+      <p class="mt-1 text-base text-fuchsia-200">Guidelines for Mini-Reviews and Perspectives</p>
+
+      <ul class="mt-2 text-sm text-neutral-300 list-disc list-inside space-y-2">
+        <li>Focus on <b>one workshop theme</b> and a <b>specific sub-topic</b>, with a clear connection to <b>robotic manipulation</b>. Please indicate the selected workshop theme (I-V) in the title and list the targeted subtopics as keywords. Prioritize work demonstrated in real-world manipulation; enabling technologies may be discussed to highlight limitations or future opportunities.</li>
+
+        <li>Emphasize research published between <b>2020-2026</b>. Earlier seminal works may be cited when needed for context.</li>
+
+        <li>Provide a <b>critical, forward-looking perspective</b> rather than a survey. Synthesize the state of the art, discuss strengths, limitations, and open challenges, and propose future directions, ideally centered on a <b>research question</b>.</li>
+
+        <li>Limit the submission length to <b>1-2 pages (including references)</b>. We value <b>original insights over exhaustive coverage</b>. One illustrative figure is encouraged, with preference for <b>original figures</b> over AI-generated artwork.</li>
+</ul>
+    </div>
+
+    <!-- Important Dates -->
     <div class="mt-8 card">
       <h4 class="text-xl font-semibold">Important dates (tentative)</h4>
       <ul class="mt-2 text-base text-neutral-300 list-disc list-inside">
-        <li>Submission site opens: TBA</li>
-        <li>Submission deadline: Aug 15, 2026</li>
-        <li>Notification: TBA</li>
+        <!--<li>Submission site opens: TBA</li> -->
+        <li>Submission deadline: August 15, 2026</li>
+        <li>Notification: September 22, 2026</li>
         <li>Camera-ready & poster upload: TBA</li>
       </ul>
     </div>
@@ -333,7 +416,7 @@
         <h4 class="text-xl font-semibold">Young Speakers Talks</h4>
         <p class="mt-2 text-sm text-neutral-300">
           Ahead of the workshop, we are running a series of online <span class="text-neutral-100 font-medium">Young Speakers</span>
-          talks (~10–15 min + Q&A) so early-career researchers can present their work, connect with other labs, and spark new
+          talks (~10-15 min + Q&A) so early-career researchers can present their work, connect with other labs, and spark new
           collaborations. Interested? Post in the <span class="text-neutral-100 font-medium">#talks</span> channel of our Slack;
           sessions are scheduled once enough participants express interest.
         </p>
@@ -432,23 +515,6 @@
   </div>
 </section>
 
-  <!-- Organizers -->
-  <!--
-  <section id="organizers" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold section-title">Organizing Committee</h2>
-    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card"><h3 class="font-semibold">Lorenzo Natale</h3><p class="text-sm text-neutral-300">Senior Researcher • IIT</p><a href="mailto:lorenzo.natale@iit.it" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">lorenzo.natale@iit.it</a></div>
-      <div class="card"><h3 class="font-semibold">Lorenzo Jamone</h3><p class="text-sm text-neutral-300">Associate Professor • UCL</p><a href="mailto:l.jamone@ucl.ac.uk" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">l.jamone@ucl.ac.uk</a></div>
-      <div class="card"><h3 class="font-semibold">Alexander Schmitz</h3><p class="text-sm text-neutral-300">CEO • XELA Robotics</p><a href="mailto:alexander@xelarobotics.com" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">alexander@xelarobotics.com</a></div>
-      <div class="card"><h3 class="font-semibold">Carlo Alessi</h3><p class="text-sm text-neutral-300">Postdoctoral Researcher • IIT</p><a href="mailto:carlo.alessi@iit.it" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">carlo.alessi@iit.it</a></div>
-      <div class="card"><h3 class="font-semibold">Gabriele Caddeo</h3><p class="text-sm text-neutral-300">Postdoctoral Researcher • IIT</p><a href="mailto:gabriele.caddeo@iit.it" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">gabriele.caddeo@iit.it</a></div>
-      <div class="card"><h3 class="font-semibold">Iris Andrussow</h3><p class="text-sm text-neutral-300">Ph.D. Student • Max Planck Institute for Intelligent Systems</p><a href="mailto:andrussow@is.mpg.de" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">andrussow@is.mpg.de</a></div>
-      <div class="card"><h3 class="font-semibold">Yuxiang Ma</h3><p class="text-sm text-neutral-300">Ph.D. Student • MIT</p><a href="mailto:yxma20@mit.edu" class="mt-2 inline-block text-xs text-fuchsia-300 hover:text-fuchsia-200">yxma20@mit.edu</a></div>
-      <div class="card"><h3 class="font-semibold">Mark Cutkosky</h3><p class="text-sm text-neutral-300">Full Professor • Stanford University</p><a href="mailto:cutkosky@stanford.edu" class="mt-2 inline-block text-sm text-fuchsia-300 hover:text-fuchsia-200">cutkosky@stanford.edu</a></div>
-    </div>
-  </section>
-  -->
-
   <!-- Organizers (with photos) -->
   <section id="organizers" class="mx-auto max-w-7xl px-4 py-14">
     <h2 class="text-2xl md:text-3xl font-bold section-title">Organizing Committee</h2>
@@ -546,8 +612,6 @@
     </div>
   </section>
 
-    
-  
   <!-- Industry & sponsors -->
   <section id="industry" class="mx-auto max-w-7xl px-4 py-14">
     <div class="flex items-end justify-between gap-4">
@@ -569,38 +633,20 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <!-- <section id="faq" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold section-title">FAQ</h2>
-    <div class="mt-6 space-y-4">
-      <details class="card">
-        <summary class="font-semibold cursor-pointer">What is the scope of the workshop?</summary>
-        <p class="mt-2 text-sm text-neutral-300">End-to-end tactile robotics: sensing, simulation, perception, and control for manipulation.</p>
-      </details>
-      <details class="card">
-        <summary class="font-semibold cursor-pointer">Where will it be held?</summary>
-        <p class="mt-2 text-sm text-neutral-300">In Vienna, Austria during ICRA 2026 (June 1–5). Exact day TBA.</p>
-      </details>
-      <details class="card">
-        <summary class="font-semibold cursor-pointer">How do I submit?</summary>
-        <p class="mt-2 text-sm text-neutral-300">Submission site and templates will be posted here. We anticipate PDF submissions via OpenReview/CMT.</p>
-      </details>
-    </div>
-  </section> -->
-
   <!-- Contact -->
   <section id="contact" class="mx-auto max-w-7xl px-4 py-14">
     <div class="card">
       <h2 class="text-2xl md:text-3xl font-bold section-title">Contact</h2>
-      <p class="mt-2 text-neutral-300">Questions, sponsorship, or accessibility requests? Email the organizers at
-        <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:iros.touch2action@gmail.com"> iros.touch2action@gmail.com</a>.
-      </p>
-      <!-- <div class="mt-4 flex flex-wrap gap-3">
-        <a href="#" class="rounded-xl px-4 py-2 bg-neutral-700 hover:bg-neutral-600 text-sm">Subscribe for updates</a>
-        <a href="#submissions" class="rounded-xl px-4 py-2 bg-fuchsia-300 text-neutral-950 hover:bg-fuchsia-200 text-sm font-semibold">Submit your work</a>
-      </div> -->
+      <p class="mt-2 text-neutral-300">Questions, sponsorship, or accessibility requests? Contact us!</p>
+      <ul class="mt-3 space-y-1 text-sm text-neutral-300">
+        <li>Carlo Alessi: <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:carlo.alessi@iit.it">carlo.alessi@iit.it</a></li>
+        <li>Gabriele Mario Caddeo: <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:gabriele.caddeo@iit.it">gabriele.caddeo@iit.it</a></li>
+        <li>Iris Andrussow: <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:andrussow@is.mpg.de">andrussow@is.mpg.de</a></li>
+        <li>Yuxiang Ma: <a class="text-fuchsia-300 hover:text-fuchsia-200" href="mailto:yxma20@mit.edu">yxma20@mit.edu</a></li>
+      </ul>
+     
     </div>
-    <p class="mt-6 text-xs text-neutral-500">© IROS 2026 Touch2Action Workshop Organizers. </p>
+    <p class="mt-6 text-xs text-neutral-500">© IROS 2026 Touch-to-Action Workshop Organizers. </p>
   </section>
 </body>
 </html>
